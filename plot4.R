@@ -8,10 +8,10 @@ plot4 <- function(power.DT){
     #   plots.
     # Arguments
     #   power.DF Power consumption data.frame
-    par(mfrow=c(2, 2), mar=c(4,2,1,2), oma=c(1,1,1,1))
+    par(mfrow=c(2, 2), mar=c(4,4,1,2), oma=c(1,1,1,1))
     plot2(power.DT)
     with(power.DT, plot(Time, Voltage, ylab="Voltage", type='l', xlab="datetime"))
-    plot3(power.DT)
+    plot3(power.DT, box.lwd=0)
     with(power.DT, plot(Time, Global_reactive_power, xlab="datetime", ylab="Global reactive power", type='l'))
     par(mfrow=c(1,1))
 }
